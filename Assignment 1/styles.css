@@ -4,17 +4,16 @@ html {
 
 .hero-contents {
   opacity: 0;
-  transform: translateY(20px); /* Start with elements below */
-  animation: fadeInUp 2s ease forwards; /* Apply the animation */
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
 }
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
-    transform: translateY(0); /* Move elements to their default position */
+    transform: translateY(0);
   }
 }
-
 
 .technology-card:hover,
 .technology-card-2:hover,
@@ -24,9 +23,15 @@ html {
   transition: background-color 0.3s, transform 0.3s;
 }
 
+.company-card:hover,
+.company-card-2:hover {
+  transform: scale(1.02);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #2B2A2E;
+  background-color: #2b2a2e;
   color: #fff;
   margin: 0;
   padding: 0;
@@ -46,8 +51,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: black;
 
-  background-image: url("/assets/images/hero-backdrop-2.png");
+  background-image: url("/assets/images/hero-backdrop.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -74,8 +80,12 @@ body {
   font-size: 14px;
   font-family: "Inter", sans-serif;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 64px;
+}
+
+.navbar a:hover {
+  color: #36c0b0;
 }
 
 .navbar-nav {
@@ -116,16 +126,17 @@ body {
 }
 
 .hero-btn {
-  background-color: #ff5c00;
+  background-color: #36c0b0;
   color: white;
   border: none;
   padding: 16px 32px;
+  margin-bottom: 8px;
   font-size: 16px;
   font-weight: 700;
   font-family: "Inter", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -140,9 +151,10 @@ body {
   font-family: "Inter", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-radius: 100px;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .hero-btn:hover {
@@ -152,7 +164,17 @@ body {
 
 .hero-btn-sec:hover {
   background-color: rgb(129, 129, 129);
-  color: white;
+}
+
+.hero-btn-a {
+  text-decoration: none;
+  color: black;
+}
+
+.services:in-range {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
 }
 
 .services {
@@ -211,7 +233,7 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: 'flex-end';
+  align-items: "flex-end";
   margin-bottom: 24px;
   background-color: #00e3a9;
   border-radius: 4px;
@@ -229,7 +251,7 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: 'flex-end';
+  align-items: "flex-end";
   margin-bottom: 24px;
   background-color: #04dde3;
   border-radius: 4px;
@@ -247,7 +269,7 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: 'flex-end';
+  align-items: "flex-end";
   margin-bottom: 24px;
   background-color: #e3aa00;
   border-radius: 4px;
@@ -286,6 +308,7 @@ body {
   background-color: #38373b;
   border-radius: 4px;
   padding: 32px;
+  margin: 4px;
 }
 
 .company-card-2 {
@@ -297,8 +320,9 @@ body {
   margin-bottom: 24px;
   background-color: #38373b;
   border-radius: 4px;
-  margin-left: 16px;
+
   padding: 32px;
+  margin: 4px;
 }
 
 .company-card-img {
@@ -335,6 +359,8 @@ body {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
+  margin-left: -4px;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -372,17 +398,26 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 64px;
+  margin-bottom: 24px;
+}
+
+.contacts-section {
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
 }
 
 .contact-card {
-  width: 320px;
+  width: 48%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: #38373b;
+  align-items: center;
+  justify-content: center;
   border-radius: 100px;
   padding: 8px;
-  padding-left: 32px;
   margin: 4px;
 }
 
@@ -391,8 +426,9 @@ body {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
 
 .footer h3 {
@@ -401,12 +437,87 @@ body {
   margin-bottom: 10px;
 }
 
-.footer p {
-  margin: 5px 0;
+.footer-p {
+  margin-left: 24px;
+  margin-right: 24px;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .footer a {
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+}
+
+.socials {
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  margin: 0 10px;
+  background-color: #38373b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-contents {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s ease forwards;
+}
+
+/* Apply fadeInLeft animation to .skills */
+.skills .technology-card,
+.skills .technology-card-2,
+.skills .technology-card-3 {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+/* Apply fadeInRight animation to .company-card and .company-card-2 */
+.jobs .company-card,
+.jobs .company-card-2 {
+  animation: fadeInRight 1s ease forwards;
 }
