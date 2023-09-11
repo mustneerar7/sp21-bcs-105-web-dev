@@ -171,16 +171,9 @@ body {
   color: black;
 }
 
-.services:in-range {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 2s ease forwards;
-}
-
 .services {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   margin-left: 64px;
   margin-top: 64px;
 }
@@ -203,7 +196,6 @@ body {
 .services-h2 {
   font-size: 32px;
   font-weight: 700;
-  /* margin-bottom: 24px; */
 }
 
 .services-p {
@@ -211,7 +203,6 @@ body {
   font-weight: 400;
   font-family: "Inter", sans-serif;
   margin-bottom: 24px;
-  /* text-align: center; */
   width: 30%;
   margin-right: 128px;
 }
@@ -507,17 +498,4 @@ a:visited {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 2s ease forwards;
-}
-
-/* Apply fadeInLeft animation to .skills */
-.skills .technology-card,
-.skills .technology-card-2,
-.skills .technology-card-3 {
-  animation: fadeInLeft 1s ease forwards;
-}
-
-/* Apply fadeInRight animation to .company-card and .company-card-2 */
-.jobs .company-card,
-.jobs .company-card-2 {
-  animation: fadeInRight 1s ease forwards;
 }
