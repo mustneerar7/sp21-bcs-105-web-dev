@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function addSubject() {
+        var li = document.createElement("li");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "subject";
+        li.appendChild(input);
+        document.querySelector("ul").appendChild(li);
+      }
+      window.onload = function () {
+        document.querySelector("button").addEventListener("click", addSubject);
+      };
+
+      // turn the input text into a text list item when done is clicked.
+      // add the list item to the ul.
+
+      function done() {
+        var input = document.querySelectorAll("input");
+        for (var i = 0; i < input.length; i++) {
+          var li = document.createElement("li");
+          li.innerHTML = input[i].value;
+          document.querySelector("ul").appendChild(li);
+        }
+        // remove the input elements.
+        var input = document.querySelectorAll("input");
+        for (var i = 0; i < input.length; i++) {
+          input[i].remove();
+        }
+
+        // also remove the bullet point of that input element.
+        var li = document.querySelectorAll("li");
+        for (var i = 0; i < li.length; i++) {
+          li[i].style.listStyle = "none";
+        }
+      }
+
+      window.onload = function () {
+        document.querySelector("button").addEventListener("click", addSubject);
+        document.querySelector(".done").addEventListener("click", done);
+      };
+    </script>
+  </head>
+  <body>
+    <!--create a page containing list of subjects.-->
+    <h1>Subjects</h1>
+    <ul>
+      <li>Maths</li>
+      <li>Science</li>
+      <li>English</li>
+    </ul>
+    <button>Add a subject</button>
+    <button class="done">Done</button>
+  </body>
+</html>
