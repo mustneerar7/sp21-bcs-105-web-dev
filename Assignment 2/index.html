@@ -3,8 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Music</title>
 
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Bold&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/2b554022ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,18 +29,32 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script
-      src="https://kit.fontawesome.com/2b554022ef.js"
-      crossorigin="anonymous"
-    ></script>
 
     <style>
+      body {
+        font-family: "IBM Plex Sans Bold", sans-serif;
+      }
       .nav-item-dropdown:hover {
         position: relative;
       }
       .nav-item.dropdown:hover .dropdown-menu {
         display: block;
       }
+      .hero-h1 {
+        animation: fadeInFromBottom 2s ease-out;
+      }
+      .card {
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .dropdown-item {
+        font-weight: 400;
+        padding: 8px;
+      }
+
       @keyframes fadeInFromBottom {
         from {
           opacity: 0;
@@ -38,13 +65,10 @@
           transform: translateY(0);
         }
       }
-
-      .hero-h1 {
-        animation: fadeInFromBottom 2s ease-out;
-      }
     </style>
   </head>
   <body>
+    <!-- Navbar -->
     <nav
       class="navbar navbar-expand-lg"
       style="
@@ -56,17 +80,6 @@
       "
     >
       <div class="container-fluid">
-        <!-- <a
-          class="navbar-brand"
-          style="
-            font-size: 18px;
-            font-weight: 600;
-            color: white;
-            margin-right: 32px;
-          "
-          href="#"
-          >PROJECT</a
-        > -->
         <button
           class="navbar-toggler"
           type="button"
@@ -103,13 +116,13 @@
               >
                 About
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+              <ul class="dropdown-menu" style="padding: 8px">
+                <li><a class="dropdown-item" href="#">Explore</a></li>
+                <li><a class="dropdown-item" href="#">Music</a></li>
+                <li><a class="dropdown-item" href="#">Cluture</a></li>
+
                 <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
+                <li><a class="dropdown-item" href="#">Pricing and Plans</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -123,13 +136,14 @@
               >
                 Support
               </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
+              <ul class="dropdown-menu" style="padding: 8px">
+                <li><a class="dropdown-item" href="#">Transfer</a></li>
+                <li><a class="dropdown-item" href="#">Supported Devices</a></li>
+                <li><a class="dropdown-item" href="#">Get help</a></li>
               </ul>
             </li>
           </ul>
-          <form style="margin-top: 24px" class="d-flex">
+          <form class="d-flex">
             <button
               class="btn btn-dark"
               type="submit"
@@ -157,6 +171,8 @@
         </div>
       </div>
     </nav>
+
+    <!-- Hero Section -->
     <div
       class="hero"
       style="
@@ -166,6 +182,7 @@
         display: flex;
         flex-direction: column;
         background-color: black;
+        background-image: url('/assets/hero-main.jpg');
       "
     >
       <h1
@@ -215,6 +232,8 @@
         </button>
       </div>
     </div>
+
+    <!-- Features Section -->
     <div
       style="
         height: 100hv;
@@ -334,6 +353,38 @@
         </div>
       </div>
     </div>
+
+    <!-- FAQ Section -->
+    <div class="container-fluid bg-light py-5">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+          <div id="faq-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <h4>What is your music playback service?</h4>
+                <p>
+                  Our music playback service is a platform that offers a vast
+                  library of songs from all genres, so you can find the perfect
+                  soundtrack for any moment.
+                </p>
+              </div>
+              <div class="carousel-item">
+                <h4>How do I create a playlist?</h4>
+                <p>
+                  Creating a playlist is easy. Simply click on the "Create
+                  Playlist" button and give your playlist a name. Then, you can
+                  add songs to your playlist by searching for them in our
+                  library and clicking the "Add to Playlist" button.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Founder Club section -->
     <div
       style="
         height: 100hv;
@@ -391,6 +442,7 @@
         </form>
       </div>
     </div>
+
     <!-- Footer Section -->
     <footer style="background-color: black; color: white; padding: 20px">
       <div class="container text-center">
@@ -398,9 +450,9 @@
           <div class="col-md-6">
             <h3>Contact Us</h3>
             <p>
-              Address: 123 Main St, City, Country<br />
-              Email: info@example.com<br />
-              Phone: +1 (123) 456-7890
+              Address: The interwebs<br />
+              Email: mustneerahmad@outlook.com<br />
+              Phone: +92 (306) 889-9248
             </p>
           </div>
           <div class="col-md-6">
