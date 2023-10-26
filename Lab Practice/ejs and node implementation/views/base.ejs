@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Music</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/2b554022ef.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        font-family: "IBM Plex Sans", sans-serif;
+      }
+      .nav-item-dropdown:hover {
+        position: relative;
+      }
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .hero-h1 {
+        animation: fadeInFromBottom 2s ease-out;
+      }
+      .card {
+        transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      .dropdown-item {
+        font-weight: 400;
+        padding: 8px;
+      }
+
+      @keyframes fadeInFromBottom {
+        from {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./partials/navbar') %> 
+    <%- include('./partials/hero') %> 
+    <%- include('./partials/features') %>
+    <%- include('./partials/faq') %>
+    <%- include('./partials/founders-club') %>
+    <%- include('./partials/footer') %>
+  </body>
+</html>
