@@ -1,0 +1,47 @@
+.TileCardSmallContainer {
+  display: flex;
+  flex-direction: column;
+  width: 140px;
+  height: 190px;
+  background-color: #1c1c1c;
+  margin-right: 8px;
+  border-radius: 6px;
+  margin-top: 16px;
+  padding: 6px;
+  align-items: center;
+}
+
+.TileCardSmallCover {
+  width: 140px;
+  height: 140px;
+  border-radius: 6px;
+}
+
+.TileCardSmallTextContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.TileCardSmallTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-family: InterBold;
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.TileCardSmallSubTitle {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0px;
+  font-family: Inter;
+  color: #fff;
+}
+
+.TileCardSmallContainer:hover {
+  cursor: pointer;
+  background-color: #2c2c2c;
+}

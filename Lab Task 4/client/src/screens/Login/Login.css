@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #222;
+}
+
+.LoginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.TextInput {
+  min-width: 320px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid #323232;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  background-color: #111111;
+  color: #ffffff;
+  user-select: none;
+}
+
+.Button {
+  margin: 32px;
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  font-size: 12px;
+  font-family: InterBold;
+}
+
+.TextLabel {
+  font-size: 12px;
+  color: #adadad;
+  font-family: InterBold;
+  margin-top: 10px;
+}
+
+/* Changes the color of button with a transition when clicked. */
+.Button:active {
+  background-color: #00ffff;
+  color: black;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9);
+}
+
+.Button::selection {
+  border-color: #00ffff;
+  outline: none;
+}
+
+.TextButton {
+  text-decoration: none;
+  color: white;
+  font-family: InterMedium;
+}
+
+.TextInput:focus {
+  border-color: #00ffff;
+  outline: none;
+  transition: border-color 0.5s ease;
+  background-color: #222222;
+}
+
+.Footer {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  background-color: #111;
+}

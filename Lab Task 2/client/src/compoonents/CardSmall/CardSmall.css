@@ -1,0 +1,50 @@
+.CardSmallContainer {
+  display: flex;
+  flex-direction: row;
+  width: 280px;
+  height: 58px;
+  background-color: #1c1c1c;
+  margin-right: 8px;
+  border-radius: 6px;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  padding: 6px;
+  align-items: center;
+
+
+}
+
+.CardSmallCover {
+    width: 56px;
+    height: 56px;
+    border-radius: 2px;
+}
+
+.CardSmallTextContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.CardSmallTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    font-family: InterBold;
+    margin: 0px;
+    margin-bottom: 4px;
+
+}
+
+.CardSmallSubTitle {
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+    font-family: Inter;
+    color: #fff;
+}
+
+.CardSmallContainer:hover {
+    cursor: pointer;
+    background-color: #2c2c2c;
+}

@@ -1,0 +1,44 @@
+.SearchContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    margin: 24px;
+}
+
+/* .SearchContainer {
+    margin-left: -8px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    height: 340px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .CardLargeContainer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #00ffff;
+    height: 240px;
+    border-radius: 10px;
+    overflow: hidden;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  
+  .CardLargeContent {
+    width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    padding: 0 20px;
+  }
+   */

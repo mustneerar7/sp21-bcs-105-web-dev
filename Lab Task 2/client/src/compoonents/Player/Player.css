@@ -1,0 +1,141 @@
+.Player {
+  min-width: 360px;
+  height: 95vh;
+  background-color: #111111;
+  margin: 16px;
+  border-radius: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  color: #fff;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.PlayerHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 0px;
+  margin-bottom: 6px;
+}
+
+.PlayerTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 18px;
+  margin-left: 0px;
+  margin-right: 180px;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
+.PlayerImage {
+  width: 330px;
+  height: 330px;
+  object-fit: contain;
+  align-self: center;
+  margin: 16px;
+  padding: 0px;
+  resize: fill;
+  border-radius: 4px;
+}
+
+.PlayerSongTitle {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.PlayerSongArtist {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0px;
+  margin-top: 2px;
+}
+
+.PlayerSongData {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 0px;
+}
+
+.PlayerLikeButton {
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:10px;
+}
+
+.PlayerControls {
+  display: flex;
+  margin-top: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-left: 24px;
+}
+
+.PlayerSlider {
+  display: block;
+}
+
+.PlayerTime {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10px;
+  justify-content: space-between;
+  margin-left: 16px;
+  margin-right: 16px;
+  padding: 4px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: InterMedium;
+  color: #fff;
+  font-size: 12px;
+  align-items: center;
+
+}
+
+.PlayerControlButton:active {
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  transform: scale(0.9);
+}
+
+@media (max-width: 700px) {
+  .Player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    margin-bottom: 36px;
+    border-radius: 6px;
+    z-index: 1;
+    background-color: #222222;
+    color: #111111;
+    display: none;
+  }
+}

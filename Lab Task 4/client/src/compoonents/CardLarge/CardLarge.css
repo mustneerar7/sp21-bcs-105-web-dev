@@ -1,0 +1,11 @@
+.CardLargeContainer{
+    
+}
+
+.CardLargeContainer:hover{
+    background-color: #2b2b2b;
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+
+}
